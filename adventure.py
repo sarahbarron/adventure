@@ -22,4 +22,7 @@ while True:
             valid_directions[k] = possible_position  # add the location to a dictionary
 
     direction = raw_input('which direction do you want to go?\n')  # ask the user for a direction
-    position = valid_directions[direction]  # passes the direction to the function
+    if direction in valid_directions:
+        position = valid_directions[direction]  # passes the direction to the function
+    else:
+        print 'this is an invalid direction'
